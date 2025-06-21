@@ -1,0 +1,297 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fff7d6, #ffe2b3);
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #f97316; /* Orange */
+  text-shadow: 1px 1px 2px #fff2cc;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #facc15;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.4);
+}
+
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* Action Buttons */
+.add-btn {
+  background-color: #f59e0b;
+  color: white;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background-color: #ea580c;
+}
+
+.edit-btn {
+  background-color: #fde68a;
+  color: #78350f;
+  font-weight: 500;
+}
+
+.edit-btn:hover {
+  background-color: #fcd34d;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff8e1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+thead {
+  background-color: #fcd34d;
+  color: #78350f;
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background-color: #fff3c4;
+}
+
+/* Misc */
+input::placeholder {
+  color: #999;
+}
+.landing-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.5rem;
+  border: 4px solid #fbbf24; /* Orange border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Center everything inside the landing container */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes footer to bottom */
+  min-height: 100vh; /* Ensures full screen height */
+  align-items: center;
+  background: linear-gradient(135deg, #fff9db, #ffe0b2, #fff8e1);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Logo styling */
+.logo {
+margin-top: 90px; 
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #fbbf24;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f97316;
+  margin-bottom: 0.5rem;
+}
+
+/* Tagline styling */
+.tagline {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+text-align:center;
+}
+
+/* Button styling */
+.btn {
+  padding: 0.75rem 2rem;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ea580c;
+}
+/* Sticky Thin Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fffdf5;
+  border-top: 1px solid #facc15;
+  padding: 8px 0;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #7c5c00;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+}
+
+.falling-cap {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: -80px; /* start high above */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dropCap 1.5s ease-out forwards;
+  z-index: 10;
+}
+
+@keyframes dropCap {
+  0% {
+    top: -80px;
+    opacity: 0;
+  }
+  50% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 15px; /* adjust to where the logo is */
+    opacity: 1;
+  }
+}
+.why-section {
+  margin: 4rem auto 2rem;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 1100px;
+}
+
+.why-title {
+  font-size: 2rem;
+  color: #ea580c;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.why-subtext {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f97316;
+  margin-bottom: 0.3rem;
+}
+
+.feature-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #ea580c;
+}
+
+.stat {
+  margin: 0.5rem;
+  min-width: 120px;
+}
+
+.cta-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ea580c;
+  margin-top: 1.5rem;
+}
+
+.cta-subtext {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+/* In App.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
