@@ -5,7 +5,7 @@ import cap from "./assets/cap.gif";
 
 export default function Landing() {
   return (
-    <div className="landing-container">
+    <div className="landing-container overflow-x-hidden">
       {/* Falling cap gif */}
       <img src={cap} alt="Falling Cap" className="falling-cap" />
       {/* Logo */}
