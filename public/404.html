@@ -1,6 +1,23 @@
-<script>
-  // Redirect all requests to index.html (SPA fix for GitHub Pages)
-  sessionStorage.redirect = location.href;
-  location.replace("/");
-</script>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // GitHub Pages SPA redirect workaround
+      (function () {
+        const redirect = sessionStorage.redirect;
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          window.location.href = redirect;
+        } else {
+          sessionStorage.redirect = window.location.href;
+          window.location.replace("/");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
