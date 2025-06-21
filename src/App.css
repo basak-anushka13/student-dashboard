@@ -236,9 +236,13 @@ text-align:center;
 .features-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 1.5rem;
   margin-bottom: 2.5rem;
+  padding: 0 1rem;         /* Prevent overflow on small screens */
+  max-width: 100vw;        /* Keep container within screen */
+  overflow-x: hidden;      /* Hide any accidental horizontal scroll */
 }
 
 .feature-box {
@@ -246,8 +250,10 @@ text-align:center;
   border-radius: 1rem;
   padding: 1.5rem;
   width: 220px;
+  max-width: 90vw;         /* Avoid overflow on very small devices */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .feature-box:hover {
@@ -271,6 +277,7 @@ text-align:center;
   font-size: 0.9rem;
   color: #666;
 }
+
 @media (max-width: 640px) {
   .feature {
     width: 90%; /* ⬅️ responsive for small screens */
