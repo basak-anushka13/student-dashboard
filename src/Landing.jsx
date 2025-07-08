@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./assets/logo.png"; // ✅ Adjust path if needed
 import cap from "./assets/cap.gif";
+import './landing.css';
 
 export default function Landing() {
   return (
